@@ -1,0 +1,22 @@
+
+<%= link_to "Home Page",{controller:'main',action:'index'} %>
+<h1>Categories#index</h1>
+
+
+<table>
+  <tr>
+    <th>Category Id</th>
+    <th>Category Name</th>
+  </tr>
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%=category.id%></td>
+      <td><%=category.name%></td>
+      <td> <%=link_to "Add task", { action: 'add_task',id: category.id}%></td>
+    </tr>
+
+  <%end%>
+
+
+
+</table>

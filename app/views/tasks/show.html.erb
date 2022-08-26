@@ -1,0 +1,8 @@
+
+<%= link_to 'Go back',tasks_path %>
+</br>
+<h2>Task <%=@task.id%></h2>
+<h4>Task name : <%=@task.name%></h4>
+<h4>Task description: <%=@task.description%></h4>
+<h4>Task position: <%=@task.position%></h4>
+<h4>Task Category: <%=@task.category&.name || '-'%></h4>

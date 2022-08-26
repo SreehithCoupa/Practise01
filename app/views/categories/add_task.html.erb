@@ -1,0 +1,22 @@
+<h2> Add tasks to <%= @category.name%> Category </h2>
+
+
+  <%= form_with url: '/categories/add' ,method: 'post' do |form| %>
+    <table>
+      <%= hidden_field :id, @category.id %>
+      <% @tasks.each do |task| %>
+        <tr>
+        <th><%=form.label task.id, task.name %></th>
+        <td><%= form.check_box task.id %></td>
+        </tr>
+
+      <% end%>
+      <tr>
+      <td><%= form.submit "Add"%></td>
+      </tr>
+    </table>
+  <%end%>
+
+
+</br>
+<%= link_to 'Go back', categories_path %>

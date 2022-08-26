@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Task name</th>
+    <td><%=f.text_field(:name)%></td>
+  </tr>
+  <tr>
+    <th>Task Description</th>
+    <td><%=f.text_area(:description)%></td>
+  </tr>
+  <tr>
+    <th>Completed</th>
+    <td><%=f.check_box(:isCompleted)%></td>
+  </tr>
+  <tr>
+    <th>Task position</th>
+    <td><%=f.text_field(:position)%></td>
+  </tr>
+
+</table>
